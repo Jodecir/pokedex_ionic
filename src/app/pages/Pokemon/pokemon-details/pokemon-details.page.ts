@@ -28,8 +28,8 @@ export class PokemonDetailsPage implements OnInit {
     });
   }
 
-  // capturar() {
-  //   this.navCtrl.navigateForward('pokeball', { queryParams: { pokemonId: this.pokemonId } });
-  // }
+  capturar() {
+    this.navCtrl.navigateForward('pokeball', { queryParams: { pokemonId: this.pokemonId } });
+  }
 
 }

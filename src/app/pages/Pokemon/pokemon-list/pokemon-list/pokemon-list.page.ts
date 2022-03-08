@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { PokeapiService } from './../../../../services/pokeapi/pokeapi.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -17,7 +18,8 @@ export class PokemonListPage implements OnInit {
    * @param pokeapiService
    * @param router
    */
-  constructor(public pokeapiService: PokeapiService) {
+  constructor(public pokeapiService: PokeapiService,
+              public router: Router) {
 
     this.search();
 
@@ -38,6 +40,16 @@ export class PokemonListPage implements OnInit {
    *
    */
   ngOnInit() {
+  }
+
+  /**
+   *
+   * @param pokemonId
+   */
+  seeMore(pokemonId: string) {
+
+    this.router.navigate([`pokemon/${pokemonId}`]);
+
   }
 
 }

@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/pokemon-list',
+    redirectTo: 'pokemon-list',
     pathMatch: 'full'
   },
   {

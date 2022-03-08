@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PokeapiService } from './../../../../services/pokeapi/pokeapi.service';
+import { PokeapiService } from './../../../services/pokeapi/pokeapi.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -48,7 +48,7 @@ export class PokemonListPage implements OnInit {
    */
   seeMore(pokemonId: string) {
 
-    this.router.navigate([`pokemon/${pokemonId}`]);
+    this.router.navigate([`pokemon-details/${pokemonId}`]);
 
   }
 

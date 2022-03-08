@@ -13,7 +13,11 @@ const routes: Routes = [
   },
   {
     path: 'pokemon-list',
-    loadChildren: () => import('./pages/Pokemon/pokemon-list/pokemon-list/pokemon-list.module').then( m => m.PokemonListPageModule)
+    loadChildren: () => import('./pages/Pokemon/pokemon-list/pokemon-list.module').then( m => m.PokemonListPageModule)
+  },
+  {
+    path: 'pokemon-details',
+    loadChildren: () => import('./pages/Pokemon/pokemon-details/pokemon-details.module').then( m => m.PokemonDetailsPageModule)
   }
 ];
 

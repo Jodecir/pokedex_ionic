@@ -8,7 +8,7 @@ import { PokemonListPageRoutingModule } from './pokemon-list-routing.module';
 
 import { PokemonListPage } from './pokemon-list.page';
 
-import { PipesModule } from "../../../../pipes/pipes.module";
+import { PipesModule } from "../../../pipes/pipes.module";
 
 @NgModule({
   imports: [

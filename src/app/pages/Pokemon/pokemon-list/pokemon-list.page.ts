@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PokeapiService } from './../../../services/pokeapi/pokeapi.service';
 import { Router } from '@angular/router';
+
+import { PokeapiService } from './../../../services/pokeapi/pokeapi.service';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -13,43 +14,23 @@ export class PokemonListPage implements OnInit {
   pokedex: any = [];
   query: string;
 
-  /**
-   *
-   * @param pokeapiService
-   * @param router
-   */
-  constructor(public pokeapiService: PokeapiService,
-              public router: Router) {
-
+  constructor(
+    public pokeapiService: PokeapiService,
+    public router: Router) {
     this.search();
-
   }
 
-  /**
-   *
-   */
   search() {
-
     this.pokeapiService.getPokedex().then((data: any) => {
       this.pokedex = data.pokemon_entries;
     });
-
   }
 
-  /**
-   *
-   */
   ngOnInit() {
   }
 
-  /**
-   *
-   * @param pokemonId
-   */
   seeMore(pokemonId: string) {
-
     this.router.navigate([`pokemon-details/${pokemonId}`]);
-
   }
 
 }
